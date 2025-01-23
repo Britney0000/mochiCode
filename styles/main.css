@@ -1,0 +1,98 @@
+body{
+    background-color: #E6E6FA;
+    font-family: 'Pangolin', 'Smooch Sans', sans-serif; /* Définit les polices */
+}
+
+/* ----------------Entête---------------------- */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Logo à gauche, menu à droite */
+    padding: 10px 20px; /* Réduction des espaces internes */
+    border-radius: 20px; /* Coins arrondis */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre subtile */
+    max-width: 1000px; /* Limite la largeur du composant */
+    width: 100%; /* Utilise toute la largeur disponible jusqu'à la limite du max-width */
+    margin: 0 auto; /* Centrer le composant horizontalement */
+}
+
+/* Logo avec effet de vibration */
+.logo {
+    height: 90px; /* Taille du logo */
+    transition: transform 0.3s ease; /* Transition fluide  */
+}
+  
+.logo:hover {
+    animation: vibrate 0.2s ease-in-out infinite; /* Animation vibration */
+}
+  
+/* Animation de vibration */
+@keyframes vibrate {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-2px); }
+    50% { transform: translateX(2px); }
+    75% { transform: translateX(-2px); }
+    100% { transform: translateX(0); }
+}
+
+/* Menu */
+.menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 40px; /* Espacement entre les liens */
+}
+  
+.menu li a {
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 25px;
+    color: black; /* Couleur noire */
+    padding: 10px 15px; /* Espacement interne des liens */
+    border-radius: 10px; /* Coins arrondis sur chaque lien */
+    transition: all 0.5s ease; /* Animation fluide */
+    background-color: #89CFF0;
+    border: 2px solid black;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Légère ombre au survol */
+    
+}
+
+/* Effet hover sur les liens */
+.menu li a:hover {
+    background: linear-gradient(45deg, #FFC0CB, #E6E6FA); /* Dégradé rose et jaune */
+    font-weight: bold; /* Texte en gras */
+    color: black; /* Texte en noir */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Légère ombre au survol */
+}
+
+
+/* ----------------Positionnemnt des différents blocs (l'un sous l'autre)---------------------- */
+/* Conteneur principal */
+.container {
+    display: flex;
+    flex-direction: column; /* Les divs se placent en colonne (l’un sous l’autre) */
+    gap: 20px; /* Ajoute un espace de 20px entre chaque div */
+    padding: 20px; /* Ajoute un espace autour du conteneur */
+  }
+  
+  /* Div individuelle */
+  .responsive-div {
+    background-color: #E6E6FA; /* Couleur lavande */
+    padding: 20px; /* Espacement interne */
+    border: 2px solid black; /* Contour rose */
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre subtile */
+    text-align: center; /* Centre le contenu */
+  }
+  
+  /* Responsive pour petits écrans */
+  @media (max-width: 768px) {
+    .responsive-div {
+      padding: 15px; /* Réduit le padding sur petits écrans */
+    }
+  }
+
+/* ----------------Menu hamburger ---------------------- */
+  
+  
