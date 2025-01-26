@@ -7,6 +7,7 @@
   <title>MochiCode</title>
   <link rel="stylesheet" href="styles/main.css"> <!-- Lien vers mon fichier CSS principal -->
   <link rel=" shortcut icon" href="assets/icons/mochi-icon.png" type="image/png"> <!-- Favicon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
   <!--Police-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,17 +18,16 @@
   <script src="scripts/app.js"></script> <!-- Mon fichier JS principal -->
 </head>
 
-<body class="container">
+<body>
   <!-- Header -->
-  <header class="header">
-
+  <header>
     <!--Logo-->
     <a href="index.html" >
       <img src="assets/icons/logo.png" alt="MochiCode Logo" class="logo">
     </a>
 
     <!--Menu-->
-    <nav>
+    <div class="menu_container">
         <ul class = "menu">
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About Me</a></li>
@@ -35,41 +35,59 @@
           <li><a href="mochiAnime.html">MochiAnime</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
-    </nav>
+    </div>
+
+    <!--Menu hamburger-->
+    <div class = "toggle_btn">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+
+    <div class="dropdown_container">
+      <ul class="dropdown_menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="dramaLand.html">DramaLand</a></li>
+        <li><a href="mochiAnime.html">MochiAnime</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
   </header>
 
-  <!-- Bloc intro-->
-  <div class="responsive-div ">
-    <h1>Welcome to MochiCode!</h1>
-    <p>your pastel universe dedicated to the thrills of K-dramas and the magic of anime</p>
-  </div>
+  <div class="blog_container">
 
-  <!--Bloc Kdrama -->
-  <div class="responsive-div ">
-    <h2>Gallery of K-dramas</h2>
-    <p>Dive into a collection of unforgettable stories that range from thrilling mysteries 
-    to tales of resilience and friendship. Whether you're a lifelong fan or just starting
-    your journey, join me in celebrating these captivating worlds and the emotions they bring.</p>
-    <button>Find out</button>
-  </div>
+    <!-- Bloc intro-->
+    <div class="responsive-div ">
+      <h1>Welcome to MochiCode!</h1>
+      <p>your pastel universe dedicated to the thrills of K-dramas and the magic of anime</p>
+    </div>
 
-  <!--Bloc Anime -->
-  <div class="responsive-div ">
-    <h2>Gallery of Anime</h2>
-    <p>From action-packed adventures to heartwarming tales, this is where I showcase 
-      my favorite anime and celebrate the artistry of animation.</p>
-    <button>Find out</button>
-  </div>
+    <!--Bloc Kdrama -->
+    <div class="responsive-div ">
+      <h1>Gallery of K-dramas</h1>
+      <p>Dive into a collection of unforgettable stories that range from thrilling mysteries 
+      to tales of resilience and friendship. Whether you're a lifelong fan or just starting
+      your journey, join me in celebrating these captivating worlds and the emotions they bring.</p>
+      <button>Find out</button>
+    </div>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 MochiCode. Made by Britney.</p>
-    <p>
-      Follow me: 
-      <a href="https://twitter.com/yourprofile" target="_blank">Twitter</a> | 
-      <a href="https://github.com/yourprofile" target="_blank">GitHub</a>
-    </p>
-  </footer>
+    <!--Bloc Anime -->
+    <div class="responsive-div ">
+      <h2>Gallery of Anime</h2>
+      <p>From action-packed adventures to heartwarming tales, this is where I showcase 
+        my favorite anime and celebrate the artistry of animation.</p>
+      <button>Find out</button>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 MochiCode. Made by Britney.</p>
+      <p>
+        Follow me: 
+        <a href="https://github.com/yourprofile" target="_blank">GitHub</a>
+      </p>
+    </footer>
+
+  </div>
 
 </body>
 </html>
