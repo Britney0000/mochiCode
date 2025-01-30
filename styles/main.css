@@ -10,8 +10,13 @@ header {
     align-items: center; /* Aligne verticalement les éléments au centre */
     padding: 10px 20px;
     position: relative; /* Nécessaire pour positionner le dropdown */
+    height: 50%;
     border-radius: 20px; /* Coins arrondis */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre légère pour un effet d'élévation */
+    position: sticky; /* Rend le menu "collant" */
+    top: 0; /* Fixe le menu en haut de la page lorsqu'on défile */
+    z-index: 1000; /* Assure que le menu reste au-dessus des autres éléments */
+    background-color: white; /* Optionnel : Assure un fond visible si le contenu défile */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optionnel : Ajoute une ombre pour le visuel */
 }
 
 /* Logo avec effet de vibration */
@@ -81,7 +86,7 @@ header {
     display: none;
 }
 
-@media (max-width: 1110px){
+@media (max-width: 1011px){
 
     /* Cache le menu principal sur les petits écrans */
     .menu_container {
@@ -138,25 +143,61 @@ header {
     display: flex;
     flex-direction: column; /* Les divs se placent en colonne (l’un sous l’autre) */
     gap: 20px; /* Ajoute un espace de 20px entre chaque div */
-    padding: 20px; /* Ajoute un espace autour du conteneur */
+    margin-top: -80px; /* Réduit l’espace entre le header et le premier div */
+    padding: 100px; /* Ajoute un espace autour du conteneur */
   }
   
   /* Div individuelle */
-.responsive-div {
-    background-color: #E6E6FA; /* Couleur lavande */
+.blog_container div {
     padding: 20px; /* Espacement interne */
     border: 2px solid black; /* Contour rose */
     border-radius: 10px; /* Coins arrondis */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre subtile */
     text-align: center; /* Centre le contenu */
+    height: calc(100vh - 215px); /* Prend toute la hauteur de l'écran moins 20px */
+    background-color: #FFC0CB;
+    font-size: 30px;
+    word-wrap: break-word; /* Évite que le texte dépasse */
+    overflow-wrap: break-word; /* Prend en charge les anciens navigateurs */
+
+
+     /* Centrage avec flexbox */
+    display: flex; /* Active flexbox */
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+    flex-direction: column; /* Aligne les éléments verticalement s'il y en a plusieurs */
   }
   
   /* Responsive pour petits écrans */
   @media (max-width: 768px) {
-    .responsive-div {
-      padding: 15px; /* Réduit le padding sur petits écrans */
+    .blog_container {
+        padding: 50px; /* Réduction du padding */
+        margin-top: -10px; /* Remet un espace normal pour éviter que le premier div chevauche le header */
+    }
+
+    .blog_container div {
+        font-size: 18px; /* Réduction de la taille du texte */
+        padding: 5px; /* Ajustement du padding */
     }
   }
 
   
-  
+  @keyframes appear {
+    from {
+        opacity: 0;
+        scale: 0.5;
+    }
+    to {
+        opacity: 1;
+        scale: 1;
+        }
+    
+  }
+
+  .scroll_effect div{
+    animation: appear linear;
+    animation-timeline: view(); /*view value indicates that the animation
+    happens only when the particular element is visible on the screen*/
+    animation-range: entry 0% cover 40% /* the animation happens when the element 
+    the viewpoint*/
+  }

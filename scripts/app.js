@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-
     // Sélectionne le bouton hamburger et le menu déroulant
     const toggleBtn = document.querySelector('.toggle_btn');
     const dropdownContainer = document.querySelector('.dropdown_container');
