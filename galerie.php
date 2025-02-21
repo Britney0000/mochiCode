@@ -8,24 +8,54 @@ $result = $conn->query($sql);
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DramaLand - Kdrama Gallery</title>
-    <link rel="stylesheet" href="styles/main.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Responsive website-->
+  <title>MochiCode</title>
+  <link rel="stylesheet" href="styles/main.css"> <!-- Lien vers mon fichier CSS principal -->
+  <link rel=" shortcut icon" href="assets/icons/mochi-icon.png" type="image/png"> <!-- Favicon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+  <!--Police-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pangolin&family=Smooch+Sans:wght@100..900&display=swap" rel="stylesheet">
+
+  <!-- Scripts -->
+  <script src="scripts/app.js"></script> <!-- Mon fichier JS principal -->
 </head>
 <body>
-    <header>
-        <a href="index.html"><img src="assets/icons/logo.png" alt="MochiCode Logo" class="logo"></a>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Me</a></li>
-                <li><a href="galerie.php">DramaLand</a></li>
-                <li><a href="mochiAnime.html">MochiAnime</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+<header>
+    <!--Logo-->
+    <a href="index.html" >
+      <img src="assets/icons/logo.png" alt="MochiCode Logo" class="logo">
+    </a>
+
+    <!--Menu-->
+    <div class="menu_container">
+        <ul class = "menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Me</a></li>
+          <li><a href="galerie.php">DramaLand</a></li>
+          <li><a href="mochiAnime.html">MochiAnime</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+
+    <!--Menu hamburger-->
+    <div class = "toggle_btn">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+
+    <div class="dropdown_container">
+      <ul class="dropdown_menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="galerie.php">DramaLand</a></li>
+        <li><a href="mochiAnime.html">MochiAnime</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+</header>
 
     <div class="gallery">
         <h1>Gallery of K-dramas</h1>
