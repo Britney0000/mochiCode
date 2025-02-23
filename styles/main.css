@@ -88,6 +88,41 @@ header {
     display: none;
 }
 
+.gallery {
+    text-align: center;
+    padding: 20px;
+}
+
+.kdrama-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.kdrama-item {
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    background: #fff;
+}
+
+.kdrama-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.kdrama-item h2 {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.kdrama-item p {
+    font-size: 14px;
+    color: #555;
+}
+
 @media (max-width: 1011px){
 
     /* Cache le menu principal sur les petits écrans */

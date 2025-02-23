@@ -58,7 +58,7 @@ $result = $conn->query($sql);
 </header>
 
     <div class="gallery">
-        <h1>Gallery of K-dramas</h1>
+        <h1 class="title">Gallery of K-dramas</h1>
         <div class="kdrama-list">
             <?php
             if ($result->num_rows > 0) {
@@ -66,9 +66,6 @@ $result = $conn->query($sql);
                     echo "<div class='kdrama-item'>";
                     echo "<img src='" . $row["image"] . "' alt='" . $row["title"] . "'>";
                     echo "<h2>" . $row["title"] . "</h2>";
-                    echo "<p><strong>Rating:</strong> ⭐" . number_format($row["rating"], 1) . "/10</p>";
-                    echo "<p>" . $row["description"] . "</p>";
-                    echo "<blockquote>« " . $row["quote"] . " »</blockquote>";
                     echo "</div>";
                 }
             } else {
